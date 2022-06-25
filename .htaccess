@@ -5,7 +5,7 @@ RewriteEngine On
 #RewriteRule ^ - [L]
 
 RewriteEngine On
-RewriteCond %{REQUEST_URI} ^/assets/
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} ^/assets/
 RewriteRule ^(.*)$ /build/$1
 
 # If the requested resource doesn't exist, use index.html
